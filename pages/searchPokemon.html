@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Pokemon</title>
+  <!-- Icon -->
+  <link rel="icon" type="image/png" href="/svg_icon/ball.png">
+  <link rel="stylesheet" href="/styles/pokemonStyle.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <input type="checkbox" id="ham-active">
+    <label for="ham-active" class="open-sidebar-button">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+    </label>
+
+    <div class="links-container">
+      <label for="ham-active" class="close-sidebar-button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+      </label>
+
+      <!-- Navigation Link -->
+      <a href="https://elvsba11.github.io/myPortfolio/" class="nav-link" target="_blank">
+        Portfolio
+      </a>
+      <a href="/index.html" class="nav-link">
+        Home
+      </a>
+      <a href="/pages/calculator.html" class="nav-link">
+        Calculator
+      </a>
+      <a href="/pages/expenseTracker.html" class="nav-link">
+        Expense Tracker
+      </a>
+      <a href="/pages/randomJoke.html" class="nav-link">
+        Random Jokes(API)
+      </a>
+      <a href="/pages/todoList.html" class="nav-link">
+        Todo List
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <input type="text" id="searchPokemon">
+    <button id="btnSearch">Search</button>
+    <img id="pokemonImg" src="" alt="">
+    <p id="showPokemon"></p>
+  </main>
+
+  <script src="/scripts/searchPokemon.js"></script>
+</body>
+</html>
