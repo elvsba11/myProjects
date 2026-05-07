@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 :root {
   --color-1: black;
@@ -177,4 +178,185 @@ section div .joke-container {
     top: 0;
     left: 0;
   }
+=======
+
+:root {
+  --color-1: black;
+  --text-color: rgb(255, 255, 255);
+  --accent-color: rgba(0, 62, 26, 0.436);
+}
+
+* {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: url('/img/cute-funny-background.jpg') no-repeat center fixed;
+  background-size: cover;
+}
+
+/* main.wrapper {
+  height: 100vh;
+  background: url('/img/cute-funny-background.jpg') no-repeat center;
+  background-size: cover;
+} */
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.211);
+  backdrop-filter: blur(10px);
+}
+
+  .links-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav svg {
+    fill: var(--color-1);
+  }
+
+  nav a {
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+  }
+
+  nav.nav-menu a.nav-link:hover {
+    background-color: var(--accent-color);
+    backdrop-filter: blur(10px);
+  }
+
+
+  #sidebar-active {
+    display: none;
+  }
+
+  .open-sidebar-button, 
+  .close-sidebar-button {
+    display: none;
+  }
+
+  /* Section  */
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section h1{
+  text-align: center;
+  color: white;
+  font-size: 5rem;
+  margin-bottom: 25px;
+}
+
+section .joke-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section div button {
+  background: rgba(1, 93, 62, 0.2);
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  color: var(--text-color);
+  transition: .5s ease-out;
+}
+
+section div button:hover {
+  background-color: rgb(0, 32, 0);
+}
+
+section div .joke-container {
+  min-width: 300px;
+  background-color: rgba(0, 68, 24, 0.512);
+  backdrop-filter: blur(10px);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 20px;
+  z-index: -1;
+  display: none;
+  text-align: center;
+  line-height: 2em;
+}
+
+.joke-container.show {
+  display: block;
+}
+/* Hamburger Menu Show */
+@media (max-width: 788px) {
+  .links-container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 300px;
+    height: max-content;
+    
+
+    background-color: rgb(25, 85, 29);
+    backdrop-filter: blur(10px);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease-out;
+  }
+
+  nav a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    color: rgb(255, 255, 255);
+  }
+
+  nav.nav-menu a.nav-link:hover {
+    background-color: var(--accent-color);
+    backdrop-filter: blur(10px);
+    color: var(--text-color);
+  }
+
+  nav svg {
+    fill: var(--text-color)
+  }
+
+  .open-sidebar-button, 
+  .close-sidebar-button {
+    padding: 20px;
+    display: block;
+  }
+
+  #sidebar-active:checked ~ .links-container {
+    right: 0;
+  }
+
+  #sidebar-active:checked ~ #overlay {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+>>>>>>> 09d47c9b0064b2eaffe864e8f713517595b53fd7
 }
