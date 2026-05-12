@@ -12,9 +12,13 @@
   padding: 0;
 }
 
+html,body{
+  overflow-x: hidden;
+}
+
 body {
   min-height: 100vh;
-  background: url('/img/cute-funny-background.jpg') no-repeat center fixed;
+  background: url('/img/cute-funny-background.jpg') no-repeat center;
   background-size: cover;
 }
 
@@ -130,16 +134,18 @@ section div .joke-container {
 
     position: fixed;
     top: 0;
-    right: -100%;
+    right: 0;
     z-index: 10;
-    width: 300px;
+    width: min(300px, 100%);
     height: max-content;
     
 
     background-color: rgb(25, 85, 29);
     backdrop-filter: blur(10px);
     box-shadow: -5px 0 5px rgba(0, 0, 0, 0.5);
-    transition: 0.5s ease-out;
+
+    transform: translateX(100%);
+    transition: transform 0.5s ease-out;
   }
 
   nav a {
@@ -167,7 +173,7 @@ section div .joke-container {
   }
 
   #sidebar-active:checked ~ .links-container {
-    right: 0;
+    transform: translateX(0);
   }
 
   #sidebar-active:checked ~ #overlay {
