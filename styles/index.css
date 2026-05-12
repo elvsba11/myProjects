@@ -48,3 +48,27 @@ header nav ul li > a {
 header nav ul li > a:hover {
   opacity: 1;
 }
+
+.grid-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.grid-item > div {
+  padding: 0.5rem;
+  align-self: center;
+  justify-self: center;
+}
+
+.grid-item > div > img {
+  width: clamp(26rem, 40vw, 30rem);
+  height: clamp(24rem, 30vw, 32rem);
+  background-color: red;
+}
+
+@media (min-width: 768px) {
+  .grid-item {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
